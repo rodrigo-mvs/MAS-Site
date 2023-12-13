@@ -12,45 +12,108 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
-    <link rel="stylesheet" href="myCSS.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body style="margin:56px 0 56px">
+<body>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
       <div class="container-fluid">
             <a class="navbar-brand" href="index.html">KnowledgeNest</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <form class="d-flex mx-auto justify-content-center" style="width: 45%;">
-                  <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <form class="d-flex mx-auto justify-content-center" style="width: 60%;">
+                <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
           <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item"><a class="nav-link" href="cart empty.html">Cart</a></li>
                   <li class="nav-item"><a class="nav-link" href="xxx.html">Sign Up</a></li>
-              
               </ul>
       </div>
   </nav>
 
 
     <!--WORKSPACE-->
-    <div class="container">
+    <div class="container-sm-1" style="padding: 0 4% 0 4%">
 
         <!--CAROUSEL-->
         <div class="row">
-            <div class="col-sm-2" style="padding-top: 2%;">
-              <p>Programming</p>  
-              <p>Music</p>
-              <p>Cooking</p>  
-              <p>Fitness</p>
-              <p>More</p>
+          <div class="col-sm-2" style="padding-top: 2%; padding-left: 4%;">
+            <div class="dropdown">
+                <button class="dropbtn"><h5>Dropdown 1</h5></button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
             </div>
+        
+            <div class="dropdown">
+              <button class="dropbtn"><h5>Dropdown 1</h5></button>
+              <div class="dropdown-content">
+                  <div class="row">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="dropdown">
+            <button class="dropbtn"><h5>Dropdown 1</h5></button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn"><h5>Dropdown 1</h5></button>
+          <div class="dropdown-content">
+              <div class="row">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"><h5>Dropdown 1</h5></button>
+        <div class="dropdown-content">
+            <div class="row">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn"><h5>Dropdown 1</h5></button>
+      <div class="dropdown-content">
+          <div class="row">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+          </div>
+      </div>
+  </div>
+
+  
+  </div>
 
 
 
+
+            
 
             <div id="carouselExampleAutoplaying" class="carousel slide col-sm-10" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -76,6 +139,79 @@
         </div>
 
         <h2 style="padding-top: 1%; padding-left: 2%; padding-bottom: 1%;">Flash Sales</h2>
+        
+
+        <div style="margin-bottom: 40px;" id="carouselExample" class="carousel slide videos">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                  <div class="col-2">
+                      <a class="video-text" href="https://www.youtube.com/watch?v=CH2px3Q4XZQ" target="_blank">
+                          <div class="card video">
+                              <img src="https://i.ytimg.com/vi/CH2px3Q4XZQ/maxresdefault.jpg" class="card-img-top" alt="BEST Moments Of The Inaugural NBA In-Season Tournament 🏆🔥">
+                              <div class="card-body">
+                                <p class="card-text">Final 2:40 EXCITING ENDING Pacers vs Bucks 🏆 | December 7, 2023</p>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-2">
+                      <a class="video-text" href="https://www.youtube.com/watch?v=8MHyjTE25Bk" target="_blank">
+                          <div class="card video">
+                              <img src="https://i.ytimg.com/vi/8MHyjTE25Bk/maxresdefault.jpg" class="card-img-top" alt="Final 3:03 OT ENDING Warriors at Thunder | December 8, 2023">
+                              <div class="card-body">
+                                <p class="card-text">Final 3:03 OT ENDING Warriors at Thunder | December 8, 2023</p>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-2">
+                      <a class="video-text" href="https://www.youtube.com/watch?v=4qRhdtLK9RU" target="_blank">
+                          <div class="card video">
+                              <img src="https://i.ytimg.com/vi/4qRhdtLK9RU/maxresdefault.jpg" class="card-img-top" alt="Joel Embiid Ties Charles Barkley In 76ers History! | December 8, 2023">
+                              <div class="card-body">
+                                <p class="card-text">Joel Embiid Ties Charles Barkley In 76ers History! | December 8, 2023</p>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-2">
+                    <a class="video-text" href="https://www.youtube.com/watch?v=CH2px3Q4XZQ" target="_blank">
+                        <div class="card video">
+                            <img src="https://i.ytimg.com/vi/CH2px3Q4XZQ/maxresdefault.jpg" class="card-img-top" alt="BEST Moments Of The Inaugural NBA In-Season Tournament 🏆🔥">
+                            <div class="card-body">
+                              <p class="card-text">Final 2:40 EXCITING ENDING Pacers vs Bucks 🏆 | December 7, 2023</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="video-text" href="https://www.youtube.com/watch?v=8MHyjTE25Bk" target="_blank">
+                        <div class="card video">
+                            <img src="https://i.ytimg.com/vi/8MHyjTE25Bk/maxresdefault.jpg" class="card-img-top" alt="Final 3:03 OT ENDING Warriors at Thunder | December 8, 2023">
+                            <div class="card-body">
+                              <p class="card-text">Final 3:03 OT ENDING Warriors at Thunder | December 8, 2023</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="video-text" href="https://www.youtube.com/watch?v=4qRhdtLK9RU" target="_blank">
+                        <div class="card video">
+                            <img src="https://i.ytimg.com/vi/4qRhdtLK9RU/maxresdefault.jpg" class="card-img-top" alt="Joel Embiid Ties Charles Barkley In 76ers History! | December 8, 2023">
+                            <div class="card-body">
+                              <p class="card-text">Joel Embiid Ties Charles Barkley In 76ers History! | December 8, 2023</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
+
         <div class="row">
 
           <a href="product info.html" style="text-decoration: none; color: black;">
@@ -127,6 +263,9 @@
         </div>
 
 
+
+
+
         <div class="d-grid gap-2 col-6 mx-auto" style="width: 15rem; padding-top: 40px; padding-bottom: 20px; ">
           <button class="btn btn-dark" type="button">View All Produts</button>
         </div>
@@ -176,6 +315,7 @@
 
 
     <!-- End of WORKSPACE-->
+    <script src="script.js"></script>
     </div>
 </body>
 </html>
