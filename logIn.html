@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="createAccount.css">
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h1>Log In</h1>
-                <h6>Enter your details below</h6>
+            <div class="col-8" style="padding:0; height: 500px; overflow: hidden;">
+                <img src="image1.png" style="object-fit: cover; width: 100%; height: 100%;"></img>
+            </div>
+            <div class="form-box login col-4" style="background-color: rgb(255, 255, 255);">
+                <h2>Log In</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input placeholder="Email" type="email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input placeholder="Password" type="password" required>
+                    </div>
+                    <button type="submit" class="btn ">Sign Up</button>
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="createAccount.html" > Register</a></p>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+            <!--
+            <div class="col-6">
+
                 <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control no-border-box" id="name" required>
+                    </div>
                     <div class="form-group">
                         <label for="email">Email or Phone Number</label>
                         <input type="text" class="form-control no-border-box" id="email" required>
@@ -22,13 +50,14 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control no-border-box" id="password" required>
                     </div>
-                    <button type="submit" class="btn btn-danger">Create Account</button>
+                    <button type="submit"  class="btn btn-danger">Create Account</button>
                 </form>
             
                 <hr>
                 <button class="btn btn-primary" >Sign up with Google</button>
                 <p class="mt-2">Already have an account? <a style="color: grey;" href="login.html">Log in</a></p>
             </div>
+            -->
         </div>
     </div>
 
@@ -36,6 +65,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="createAccount.js"></script>
 </body>
 </html>
