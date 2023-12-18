@@ -1,1 +1,101 @@
-{"id":"1","name":"Produto","price":"25.30","description":"Descrição do produto","category":"Categoria", "image":"http://www.4geeks.com.br/wp-content/uploads/2016/03/4geeks-logo.png"}
+[
+    {"id":"1",
+    "name":"Python Crash Course (2nd Edition)",
+    "price":"43.39",
+    "description":"Python Crash Course, 2nd Edition is a straightforward introduction to the core of Python programming. Author Eric Matthes dispenses with the sort of tedious, unnecessary information that can get in the way of learning how to program, choosing instead to provide a foundation in general programming concepts, Python fundamentals, and problem solving. Three real world projects in the second part of the book allow readers to apply their knowledge in useful ways. Readers will learn how to create a simple video game, use data visualization techniques to make graphs and charts, and build and deploy an interactive web application. Python Crash Course, 2nd Edition teaches beginners the essentials of Python quickly so that they can build practical programs and develop powerful programming techniques.",
+    "category":"Programação",
+    "author":"Eric Matthes",
+    "image":"https://static.fnac-static.com/multimedia/Images/PT/NR/da/cb/50/5295066/1507-1.jpg"
+    },
+
+    {"id":"2",
+    "name":"Cloud native devops with kubernetes",
+    "price":"79.61",
+    "description":"Kubernetes is the operating system of the cloud native world, providing a reliable and scalable platform for running containerized workloads. In this friendly, pragmatic book, cloud experts John Arundel and Justin Domingus show you what Kubernetes can do―and what you can do with it. You’ll learn all about the Kubernetes ecosystem, and use battle-tested solutions to everyday problems. You’ll build, step by step, an example cloud native application and its supporting infrastructure, along with a development environment and continuous deployment pipeline that you can use for your own applications.",
+    "category":"Programação",
+    "author":"Justin Domingus",
+    "image":"https://static.fnac-static.com/multimedia/Images/PT/NR/57/eb/79/7990103/1540-1.jpg"
+    },
+
+    {"id":"3",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"4",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"5",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"6",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"7",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"8",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"9",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"10",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"11",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    },
+
+    {"id":"12",
+    "name":"",
+    "price":"",
+    "description":"",
+    "category":"",
+    "image":""
+    }
+
+
+]
