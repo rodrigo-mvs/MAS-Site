@@ -11,3 +11,19 @@
   cursor: pointer;
   border-radius: 5px;
 }
+
+.photo {
+  height: auto;
+  max-height: 500px;
+  width: auto;
+  max-width: 600px;
+  border-radius: 5px;
+  border: 5px solid grey;
+  overflow: hidden; /* Hides any content that extends beyond the border */
+  padding: 0;
+}
+
+.photo img {
+  width: auto;
+  height: auto; /* Preserves the aspect ratio of the image */
+}
