@@ -25,14 +25,10 @@
 
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="cart empty.html">Cart</a></li>
-            <li class="nav-item"><a class="nav-link" href="indexLog.html">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="createAccount.html">Sign Up</a></li>
           </ul>
         </div>
   </nav>
-
-
-
 
 
   <div class="container-sm-1" style="padding: 0 4% 0 4%">
@@ -127,23 +123,6 @@
       </div>
     </div>
 
-
-    <div class="container">
-      <div class="row" data-bind="foreach: products">
-        <div class="col-7">
-          <a data-bind="attr: { href: 'productDetails.html?id=' + id }">
-            <img data-bind="attr: { src: image }" class="d-block w-100"
-              style="object-fit: contain; height: 450px; max-width: 650px;" alt="...">
-          </a>
-        </div>
-        <div class="col-5">
-          <h1 style="padding-bottom: 5%;"><span data-bind="text: name"></span></h1>
-          <h4><span data-bind="text: price + '€'"></span></h4>
-          <!-- Display other product details here -->
-        </div>
-      </div>
-    </div>
-
     
     <section class="section-products" style="margin-top: 50px;">
       <div class="container">
@@ -164,7 +143,9 @@
                   <div id="product-1" class="single-product">
                       <div class="part-1">
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=8"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -180,7 +161,9 @@
                   <div id="product-2" class="single-product">
                       <div class="part-1">
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=7"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -196,7 +179,9 @@
                   <div id="product-3" class="single-product">
                       <div class="part-1">
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=6"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -213,7 +198,9 @@
                       <div class="part-1">
                           <span class="new">new</span>
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=5"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -229,7 +216,9 @@
                   <div id="product-5" class="single-product">
                       <div class="part-1">
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=4"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -245,7 +234,9 @@
                   <div id="product-6" class="single-product">
                       <div class="part-1">
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=3"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -261,7 +252,9 @@
                   <div id="product-7" class="single-product">
                       <div class="part-1">
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=1"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -278,7 +271,9 @@
                       <div class="part-1">
                           <span class="new">new</span>
                           <ul>
+                            <button class="btn cart">
                               <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
+                            </button>
                               <a href="product-info.html?id=2"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
                           </ul>
                       </div>
@@ -302,7 +297,9 @@
 
 
     <div class="d-grid gap-2 col-6 mx-auto" style="width: 15rem; padding-top: 40px; padding-bottom: 20px; ">
-      <button class="btn btn-dark" type="button">View All Produts</button>
+      <a href="categories.html">
+        <button class="btn btn-dark" type="button">View All Produts</button>
+      </a>
     </div>
 
     </div>
