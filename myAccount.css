@@ -48,3 +48,13 @@ body {
     outline: none; /* Removes the outline when the input is focused */
     /* Add any additional styling here */
 }
+
+.fa-user {
+    font-size: 30px;
+}
+
+.icon{
+    border-radius: 20px;
+    color: grey;
+    padding: 10px;
+  }

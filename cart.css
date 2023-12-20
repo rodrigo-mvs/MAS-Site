@@ -121,8 +121,13 @@ p{
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
-    .breadcrumb-item+.breadcrumb-item {
-        padding-left: 0
-    }
+
+.fa-user {
+    font-size: 30px;
 }
+
+.icon{
+    border-radius: 20px;
+    color: grey;
+    padding: 10px;
+  }
