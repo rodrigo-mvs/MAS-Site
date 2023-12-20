@@ -12,3 +12,7 @@ fetch('produtos.json')
       containerPrincipal.appendChild(div);
     }
   }
+
+
+  
+  
