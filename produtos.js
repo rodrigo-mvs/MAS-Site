@@ -174,11 +174,6 @@ $('.cart').on('click', function(){ //quando clicam em qqlr botão c a class .car
 })
 
 
-
-
-
-
-
 function getRandomProducts() {
     var indices = new Set();  // To ensure we don't select the same product twice
     while(indices.size < 4) {
