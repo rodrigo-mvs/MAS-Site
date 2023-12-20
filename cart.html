@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
-    <link rel="stylesheet" href="myCSS.css" />
+    <link rel="stylesheet" href="cart.css" />
 </head>
 
 <body style="margin:56px 0 56px">
@@ -37,92 +37,176 @@
 
 
     <!--WORKSPACE-->
-    <div class="container"   style="padding-top: 2%;">
-      <table class="table table-striped-lines">
-        <thead>
-          <tr>
-            <th scope="col">Product</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col" >Subtotal</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr id="product1">
-            <td scope="col"><a href="product info.html" style="text-decoration: none; color: black;">NameProduct1</a></td>
-            <td scope="col">23.50€</td>
-            <td scope="col">1</td>
-            <td scope="col" >23.50€</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="container">
-        <div class="row" style="padding-bottom: 50px;">
-          <div class="col-2" style="padding: 0%; text-align: center;">
-            <a href="index.html" class="btn btn-secondary text-center" role="button" style="height:50px ; width: 200px; text-align: center; padding-top: 5%;">Return to Shop</a>
-          </div>
-
-          <div class="col-2"></div>
-
-          <div class="col-2"></div>
-
-          <div class="col-2"></div>
-
-          <div class="col-2"></div>
-
-          <div class="col-2" style="padding: 0%; text-align: center;">
-            <button type="button" class="btn btn-secondary" style="height:50px ; width: 200px;">Update Cart</button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-4" style="text-align: center;">
-            <input type="text" id="couponCode" name="couponCode" placeholder="Coupon Code" style="height:35px; margin: 0; padding: 0; border: 2px solid rgb(141, 141, 141)">
-            <button type="button" class="btn btn-secondary">Apply Coupon</button>
-          </div>
-          <div class="col-2"></div>
-
-          <div class="col-6" style="border: 2px solid rgb(141, 141, 141); padding: 20px;">
-            <div class="row">
-              <div class="col-12">
-                  <h5>Cart Total</h5>
-              </div> 
-    
-              <div class="col-6">
-                  <p>Subtotal:</p>
+    <div class=" container-fluid my-5 ">
+      <div class="row justify-content-center ">
+          <div class="col-xl-10">
+              <div class="card shadow-lg ">          
+                  <div class="row justify-content-around">
+                      <div class="col-md-5">
+                          <div class="card border-0">
+                              <div class="card-header pb-0">
+                                  <h2 class="card-title space ">Checkout</h2>
+                                  <p class="card-text text-muted mt-4  space">SHIPPING DETAILS</p>
+                                  <hr class="my-0">
+                              </div>
+                              <div class="card-body">
+                                <div class="row no-gutters">
+                                  <div class="col-sm-6 pr-sm-2">
+                                      <div class="form-group">
+                                          <label for="NAME" class="small text-muted mb-1">FIRST NAME</label>
+                                          <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your first name here">
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div class="form-group">
+                                          <label for="NAME" class="small text-muted mb-1">LAST NAME</label>
+                                          <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your last name here">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="NAME" class="small text-muted mb-1">STREET ADDRESS</label>
+                                  <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your address here">
+                              </div>
+                              <div class="row no-gutters">
+                                  <div class="col-sm-6 pr-sm-2">
+                                      <div class="form-group">
+                                          <label for="NAME" class="small text-muted mb-1">COUNTRY</label>
+                                          <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your country here">
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div class="form-group">
+                                          <label for="NAME" class="small text-muted mb-1">STATE</label>
+                                          <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your state here">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row no-gutters">
+                                <div class="col-sm-6 pr-sm-2">
+                                    <div class="form-group">
+                                        <label for="NAME" class="small text-muted mb-1">POSTAL-CODE</label>
+                                        <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your postal-code here">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="NAME" class="small text-muted mb-1">PHONE NUMBER</label>
+                                        <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter your phone number here">
+                                    </div>
+                                </div>
+                            </div>
+                                  <div class="row mt-4">
+                                      <div class="col"><p class="text-muted mb-2">PAYMENT DETAILS</p><hr class="mt-0"></div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="NAME" class="small text-muted mb-1">NAME ON CARD</label>
+                                      <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter the name on the card here">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="NAME" class="small text-muted mb-1">CARD NUMBER</label>
+                                      <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter the card number here">
+                                  </div>
+                                  <div class="row no-gutters">
+                                      <div class="col-sm-6 pr-sm-2">
+                                          <div class="form-group">
+                                              <label for="NAME" class="small text-muted mb-1">VALID THROUGH</label>
+                                              <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter the expiration date here">
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-6">
+                                          <div class="form-group">
+                                              <label for="NAME" class="small text-muted mb-1">CVC CODE</label>
+                                              <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Enter the cvc code here">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row mb-md-5">
+                                      <div class="col" style="margin-top: 15px;">
+                                          <button type="button" name="" id="" class="btn  btn-lg btn-block ">PLACE ORDDER</button>
+                                      </div>
+                                  </div>    
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="card border-0 ">
+                              <div class="card-header card-2">
+                                  <p class="card-text text-muted mt-md-4  mb-2 space">YOUR ORDER <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Quantity</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;Price</span></p>
+                                  <hr class="my-2">
+                              </div>
+                              <div class="card-body pt-0">
+                                  <div class="row  justify-content-between">
+                                      <div class="col-auto col-md-7">
+                                          <div class="media flex-column flex-sm-row">
+                                              <div class="media-body  my-auto">
+                                                  <div class="row ">
+                                                      <div class="col-auto"><p class="mb-0"><b>Item1</b></p><small class="text-muted">Type1</small></div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class=" pl-0 flex-sm-col col-auto  my-auto"> <p class="boxed-1">2</p></div>
+                                      <div class=" pl-0 flex-sm-col col-auto  my-auto "><p><b>Price1</b></p></div>
+                                  </div>
+                                  <hr class="my-2">
+                                  <div class="row  justify-content-between">
+                                      <div class="col-auto col-md-7">
+                                          <div class="media flex-column flex-sm-row">
+                                              <div class="media-body  my-auto">
+                                                  <div class="row ">
+                                                      <div class="col"><p class="mb-0"><b>Item2</b></p><small class="text-muted">Type2</small></div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="pl-0 flex-sm-col col-auto  my-auto"><p class="boxed-1">3</p></div>
+                                      <div class="pl-0 flex-sm-col col-auto my-auto"><p><b>Price2</b></p></div>
+                                  </div>
+                                  <hr class="my-2">
+                                  <div class="row  justify-content-between">
+                                      <div class="col-auto col-md-7">
+                                          <div class="media flex-column flex-sm-row">
+                                              <div class="media-body  my-auto">
+                                                  <div class="row ">
+                                                      <div class="col"><p class="mb-0"><b>Item3</b></p><small class="text-muted">Type3</small></div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="pl-0 flex-sm-col col-auto  my-auto"> <p class="boxed-1">2</p></div>
+                                      <div class="pl-0 flex-sm-col col-auto my-auto"><p><b>Price3</b></p></div>
+                                  </div>
+                                  <hr class="my-2">
+                                  <div class="row ">
+                                      <div class="col">
+                                          <div class="row justify-content-between">
+                                              <div class="col-4"><p class="mb-1"><b>Subtotal</b></p></div>
+                                              <div class="flex-sm-col col-auto"><p class="mb-1"><b>€€€€</b></p></div>
+                                          </div>
+                                          <div class="row justify-content-between">
+                                              <div class="col"><p class="mb-1"><b>Shipping</b></p></div>
+                                              <div class="flex-sm-col col-auto"><p class="mb-1"><b>€€€€</b></p></div>
+                                          </div>
+                                          <div class="row justify-content-between">
+                                              <div class="col-4"><p ><b>Total</b></p></div>
+                                              <div class="flex-sm-col col-auto"><p  class="mb-1"><b>€€€€</b></p> </div>
+                                          </div><hr class="my-0">
+                                      </div>
+                                  </div>
+                                  <div class="row mb-5 mt-4 ">
+                                      <div class="col-md-7 col-lg-6 mx-auto"><button type="button" class="btn btn-block btn-outline-primary btn-lg">ADD GIFT CODE</button></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-
-              <div class="col-6 text-end">
-                <p>23.50€</p>
-              </div>
-            
-              <hr>
-
-
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <p>Total:</p>
-                </div>
-                <div class="col-6 text-end">
-                    <p>23.50€</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-12 text-center">
-                  <a href="order.html" class="btn btn-secondary text-center" role="button" style="height:50px ; width: 200px; text-align: center; padding-top: 2%;">Proceed to Checkout</a>
-                </div>
-            </div>
-        </div>
+          </div>
       </div>
-  
-
-
-
+  </div>
     <!-- End of WORKSPACE-->
     </div>
+    <script src="cart.js"></script>
 </body>
 </html>
