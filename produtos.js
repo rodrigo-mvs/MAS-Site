@@ -99,6 +99,48 @@ var vm = function () {
             author: 'John Doe',
             id:4
         },
+
+
+        {
+            name: 'Python Crash Course (2nd Edition)',
+            type: 'E-Book',
+            image: 'https://static.fnac-static.com/multimedia/Images/PT/NR/da/cb/50/5295066/1507-1.jpg',
+            categorie: 'Programming',
+            price: 43,
+            description: 'Python Crash Course, 2nd Edition is a straightforward introduction to the core of Python programming. Author Eric Matthes dispenses with the sort of tedious, unnecessary information that can get in the way of learning how to program, choosing instead to provide a foundation in general programming concepts, Python fundamentals, and problem solving. Three real world projects in the second part of the book allow readers to apply their knowledge in useful ways. ',
+            author: 'Eric Matthes',
+            id:5
+        },
+        {
+            name: 'Cloud Native DevOps with Kubernetes',
+            type: 'E-Book',
+            image: 'https://static.fnac-static.com/multimedia/Images/PT/NR/57/eb/79/7990103/1540-1.jpg',
+            categorie: 'Programming',
+            price: 78,
+            description: 'Kubernetes is the operating system of the cloud native world, providing a reliable and scalable platform for running containerized workloads. In this friendly, pragmatic book, cloud experts John Arundel and Justin Domingus show you what Kubernetes can do―and what you can do with it.',
+            author: 'Justin Domingus',
+            id:6
+        },
+        {
+            name: 'The Science of Cooking',
+            type: 'E-Book',
+            image: 'https://static.fnac-static.com/multimedia/Images/PT/NR/7d/5c/14/1334397/1540-1/tsp20180321132214/The-Science-of-Cooking.jpg',
+            categorie: 'Cooking',
+            price: 24,
+            description: 'Which vegetables should you eat raw? How do you poach the perfect egg? And should you keep your eggs in the fridge? Food scientist Dr Stuart Farrimond answers all these questions - and many more like them - equipping you with the scientific know-how to take your cooking to new levels.',
+            author: 'Stuart Farrimond',
+            id:7
+        },
+        {
+            name: 'Improve Your Communication Skills - (Creating Success)',
+            type: 'E-Book',
+            image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/716LRKW6hFL._SY466_.jpg',
+            categorie: 'Talks',
+            price: 14,
+            description: 'Improve Your Communication Skills is your practical guide to effective verbal, non-verbal and written communication in business. Full of proven tips and techniques, it will help you keep the interest of a large audience, impress a potential employer or simply win the argument at an important meeting.',
+            author: 'Alan Barker',
+            id:8
+        },
     
     
     ]);
