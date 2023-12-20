@@ -134,7 +134,7 @@ var vm = function () {
         {
             name: 'Improve Your Communication Skills - (Creating Success)',
             type: 'E-Book',
-            image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/716LRKW6hFL._SY466_.jpg',
+            image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61i+pxO8E0L._AC_UF1000,1000_QL80_.jpg',
             categorie: 'Talks',
             price: 14,
             description: 'Improve Your Communication Skills is your practical guide to effective verbal, non-verbal and written communication in business. Full of proven tips and techniques, it will help you keep the interest of a large audience, impress a potential employer or simply win the argument at an important meeting.',
