@@ -88,6 +88,46 @@ var vm = function () {
             id:8
         },
     
+        {
+            name: 'Data Science Online Course',
+            type: 'Online Course',
+            image: 'https://onleitechnologies.com/wp-content/uploads/2022/06/ONLEI-POST-NEW-40-1024x1024.png',
+            categorie: 'Programming',
+            price: 100,
+            description: 'Learn the fundamentals of data science through this comprehensive online course.',
+            author: 'DataScienceTeach',
+            id:9
+        },
+        {
+            name: 'Machine Learning E-Book',
+            type: 'E-Book',
+            image: 'https://m.media-amazon.com/images/I/51GxW8immiL._SL500_.jpg',
+            categorie: 'Programming',
+            price: 30,
+            description: 'Dive into machine learning with this comprehensive e-book, suitable for all levels.',
+            author: 'Chris Sebastian',
+            id:10
+        },
+        {
+            name: 'Web Development Online Course',
+            type: 'Online Course',
+            image: 'https://d8r14y803bnlk.cloudfront.net/thumbnails/Online%2520Course%2520Graphic%2520Design%2520Shopify%2520Mobile%2520Banner_1.png',
+            categorie: 'Programming',
+            price: 80,
+            description: 'Master web development with this comprehensive online course covering various styles and techniques.',
+            author: 'WebDevTeach',
+            id:11
+        },
+        {
+            name: 'Artificial Intelligence Basics',
+            type: 'E-Book',
+            image: 'https://m.media-amazon.com/images/I/41AF7zW4qIL.jpg',
+            categorie: 'Programming',
+            price: 40,
+            description: 'Learn the basics of artificial intelligence with this comprehensive e-book.',
+            author: 'Tom Taull',
+            id:12
+        }
     
     ]);
 
@@ -132,3 +172,33 @@ $('.cart').on('click', function(){ //quando clicam em qqlr botão c a class .car
     $('#price').text(parseFloat(price)) // o #price é o id do sitio onde tou a meter o preço total
     console.log("clicouuuuu")
 })
+
+
+let price = parseFloat(0)
+let numitems = parseInt(0)
+
+$('.cart').on('click', function(){ //quando clicam em qqlr botão c a class .cart isto tudo acontece
+    price = parseFloat(price) + parseFloat(10.79) //o 10,79 é o preco dos meus artigos todos ent fica mais facil, senao era preciso ires uscar o id de cada um dos artigos(onde tens o preço) e somares isso á variavel
+    numitems = parseFloat(numitems) + parseFloat(1)
+    $('#numItem').text(parseFloat(numitems)) // o #numitem é o id do sitio onde tou a meter o numero de artigos
+    $('#price').text(parseFloat(price)) // o #price é o id do sitio onde tou a meter o preço total
+    console.log("clicouuuuu")
+})
+
+
+
+
+
+
+
+function getRandomProducts() {
+    var indices = new Set();  // To ensure we don't select the same product twice
+    while(indices.size < 4) {
+        indices.add(Math.floor(Math.random() * self.productsData().length));
+    }
+
+    var randomProducts = Array.from(indices).map(index => self.productsData()[index]);
+    return randomProducts;
+}
+
+var randomProducts = getRandomProducts();
