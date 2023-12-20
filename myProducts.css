@@ -1,0 +1,56 @@
+body {
+    background: #b6b3b3
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: #b6b3b3;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #b6b3b3
+}
+
+.profile-button:focus {
+    background: #b6b3b3;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #b6b3b3;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #b6b3b3;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #c3c3c3;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #c3c3c3
+}
+
+#descriptionInput {
+    border: none;
+    outline: none; /* Removes the outline when the input is focused */
+    /* Add any additional styling here */
+}
+
+.fa-user {
+    font-size: 30px;
+    color: grey;
+  }
+  
