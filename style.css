@@ -151,6 +151,11 @@ a:hover {
     font-size: 0.85rem;
 }
 
+.offcanvas-body {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
 .section-products .single-product .part-1 .new {
     left: 0;
     background-color: #444444;
