@@ -234,7 +234,6 @@ a:hover {
 
 
 #showmore{
-  margin-top:10px ;
   width: 250px;
   height: 50px;
   border-radius: 25px;
@@ -244,8 +243,7 @@ a:hover {
 
 
 #showmore:hover {
-  background-color: #0000004f;
-  color: white;
+  color: rgb(62, 40, 161);
 }
 
 
@@ -260,5 +258,6 @@ a:hover {
   background-color: #0000004f;
   color: white;
 }
+
 
 
