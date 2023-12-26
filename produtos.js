@@ -161,24 +161,3 @@ $(document).ready(function () {
     ko.applyBindings(new vm());
 });
 
-
-let carts = document.querySelectorAll('.add-cart');
-
-for (let i=0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        console.log('nigga')
-    })
-}
-
-
-function getRandomProducts() {
-    var indices = new Set();  // To ensure we don't select the same product twice
-    while(indices.size < 4) {
-        indices.add(Math.floor(Math.random() * self.productsData().length));
-    }
-
-    var randomProducts = Array.from(indices).map(index => self.productsData()[index]);
-    return randomProducts;
-}
-
-var randomProducts = getRandomProducts();
