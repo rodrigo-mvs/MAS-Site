@@ -2,7 +2,8 @@ var vm = function () {
     console.log('ViewModel initiated...');
     var self = this;
     self.products = ko.observableArray([]);
-    self.selectedProductId = ko.observable(null);
+    self.id = ko.observable('');
+    self.qt = ko.observable(1);
 
     self.productsData = ko.observableArray([
         {
@@ -131,11 +132,34 @@ var vm = function () {
     
     ]);
 
+    self.addCart = function () {
+        var cart = localStorage.getItem('cart')
+        if (cart == null) {
+            cart = '{}'
+        }
+        
+        cart = JSON.parse(cart)
+        
+
+        if (cart[self.id()] != 0 && cart[self.id()] != undefined ) {
+            cart[self.id()] += parseInt(self.qt())
+        } 
+        else {
+            cart[self.id()] = parseInt(self.qt())
+        }
+        
+        console.log(cart)
+        cart = JSON.stringify(cart)
+        localStorage.setItem('cart', cart)
+    
+    }
+
     self.initiate = function (productId) {
         console.log(productId)
         self.productsData(self.productsData().filter(function (element) {
             return element.id === productId;
         }))
+        self.id(productId)
     }
 
     function getUrlParameter(sParam) {
@@ -156,8 +180,11 @@ var vm = function () {
     self.initiate(parseInt(getUrlParameter('id')))
 };
 
+
+
 $(document).ready(function () {
     console.log("ready!");
     ko.applyBindings(new vm());
 });
+
 

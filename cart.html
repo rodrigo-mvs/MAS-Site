@@ -183,60 +183,30 @@
                           <div class="card border-0 ">
                               <div class="card-header card-2">
                                   <p class="card-text text-muted mt-md-4  mb-2 space">YOUR ORDER <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Quantity</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;Price</span></p>
-                                <!-- <hr class="my-2">--> 
                               </div>
                               <div class="card-body pt-0">
-                              <!--    <div class="row  justify-content-between">
-                                      <div class="col-auto col-md-7">
-                                          <div class="media flex-column flex-sm-row">
-                                              <div class="media-body  my-auto">
-                                                  <div class="row ">
-                                                      <div class="col-auto"><p class="mb-0"><b>Item1</b></p><small class="text-muted">Type1</small></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class=" pl-0 flex-sm-col col-auto  my-auto"> <p class="boxed-1">2</p></div>
-                                      <div class=" pl-0 flex-sm-col col-auto  my-auto "><p><b>Price1</b></p></div>
-                                  </div>
                                   <hr class="my-2">
+                                  <!-- ko foreach: products -->
                                   <div class="row  justify-content-between">
                                       <div class="col-auto col-md-7">
                                           <div class="media flex-column flex-sm-row">
                                               <div class="media-body  my-auto">
                                                   <div class="row ">
-                                                      <div class="col"><p class="mb-0"><b>Item2</b></p><small class="text-muted">Type2</small></div>
+                                                      <div class="col"><p class="mb-0"><b data-bind="text: name"></b></p><small class="text-muted" data-bind="text: categorie + ' | ' + type"></small></div>
                                                   </div>
                                               </div>
                                           </div>
                                       </div>
-                                      <div class="pl-0 flex-sm-col col-auto  my-auto"><p class="boxed-1">3</p></div>
-                                      <div class="pl-0 flex-sm-col col-auto my-auto"><p><b>Price2</b></p></div>
-                                  </div>--> 
-                                  <hr class="my-2">
-                                  <div class="row  justify-content-between">
-                                      <div class="col-auto col-md-7">
-                                          <div class="media flex-column flex-sm-row">
-                                              <div class="media-body  my-auto">
-                                                  <div class="row ">
-                                                      <div class="col"><p class="mb-0"><b>Python Crash Course (2nd Edition)</b></p><small class="text-muted">Programming: E-Book</small></div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="pl-0 flex-sm-col col-auto  my-auto"> <p class="boxed-1">1</p></div>
-                                      <div class="pl-0 flex-sm-col col-auto my-auto"><p><b>43€</b></p></div>
+                                      <div class="pl-0 flex-sm-col col-auto  my-auto"> <p class="boxed-1" data-bind="text: qt"></p></div>
+                                      <div class="pl-0 flex-sm-col col-auto my-auto"><p><b data-bind="text: price + '€'"></b></p></div>
                                   </div>
+                                  <!-- /ko -->
                                   <hr class="my-2">
                                   <div class="row ">
                                       <div class="col">
                                           <div class="row justify-content-between">
-                                              <div class="col-4"><p class="mb-1"><b>Subtotal</b></p></div>
-                                              <div class="flex-sm-col col-auto"><p class="mb-1"><b>43€</b></p></div>
-                                          </div>
-                                          <div class="row justify-content-between">
                                               <div class="col-4"><p ><b>Total</b></p></div>
-                                              <div class="flex-sm-col col-auto"><p  class="mb-1"><b>43€</b></p> </div>
+                                              <div class="flex-sm-col col-auto"><p  class="mb-1"><b data-bind="text: price() + '€'"></b></p> </div>
                                           </div><hr class="my-0">
                                       </div>
                                   </div>
