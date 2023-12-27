@@ -17,80 +17,48 @@
 <body style="margin:56px 0 56px">
 
   <!-- NAVBAR -->
- <!-- NAVBAR -->
- <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
     <div class="container-fluid">
       <button class="btn btn-primary-border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-bars" aria-hidden="true"></i></button>
 
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-            <li class="nav-item"><a class="fa fa-user icon" href="myAccount.html" aria-hidden="true"></a></li>
-          </ul>
-        </div>
+      <span class="navbar-text" style="margin-right: 20px;">
+        <script>
+          if (localStorage.getItem('currentUser') == null) {
+              document.write('<a class="btn" role="button" href="signup.html">Sign up</a>');
+              document.write('<a class="btn ms-4" role="button" href="login.html">Login</a>');
+          }
+          else {
+              document.write('<div class="dropdown">');
+              document.write('<a class="btn dropdown-toggle ms-4" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Hello, ' + JSON.parse(localStorage.getItem('currentUser'))+ '</a>');
+              document.write('<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">');
+              document.write('<li><a class="dropdown-item" href="cart.html">Cart</a></li>');
+              document.write('<li><a class="dropdown-item" href="myAccount.html">My Account</a></li>');
+              document.write('<li><hr class="dropdown-divider"></li>');
+              document.write('<li><a class="dropdown-item" onclick="logout()" >Logout</a></li>');
+              document.write('</ul>');
+              document.write('</div>');
+          }
+        </script>
+      </span>
+    </div>
   </nav>
 
-
-
   <div class="container-sm-1" style="padding: 0 4% 0 4%">
-    <form class="d-flex mx-auto justify-content-center" style="width: 45%; padding-top: 20px; padding-bottom: 20px;">
-      <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-    </form>
-
     
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
-        <a class="navbar-brand" href="index.html"><h3>KnowledgeNest</h3></a>
+        <a class="navbar-brand mt-2" href="index.html"><h3>KnowledgeNest</h3></a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h5>Programming</h5>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <a href="categorias.html">Python</a>
-              <a href="#">JavaScript</a>
-              <a href="#">Bootstrap</a>
-            </div>
-          </div>
+      <div class="offcanvas-body ml-4">
+          <a href="categorias.html"><h5>Programming</h5></a>
+          <h5 onclick="window.alert('Element Under Construction!')">Music</h5>
+          <h5 onclick="window.alert('Element Under Construction!')">Dance</h5>
+          <h5 onclick="window.alert('Element Under Construction!')">Fitness</h5>
         </div>
-
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h5>Music</h5>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <a href="#">Piano</a>
-              <a href="#">Guitar</a>
-              <a href="#">Flute</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h5>Fitness</h5>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
-        </div>
-
-        <a href="#"><h5>Cooking</h5></a>
-
-        <a href="#" style="padding-left: 5%; font-size: 18px;" data-bs-container="body" bata-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right Popover">More...</a>
-
-
       </div>
     </div>
+
 
   <!--WORKSPACE-->
 
@@ -118,110 +86,6 @@
         </div>
     </div>
 </section>
-<!-- Related items section-->
-<section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 mt-5">
-        <h2 class="fw-bolder mb-4">Related products</h2>
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="https://static.fnac-static.com/multimedia/Images/PT/NR/da/cb/50/5295066/1507-1.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Fancy Product</h5>
-                            <!-- Product price-->
-                            $40.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See Product</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="https://static.fnac-static.com/multimedia/Images/PT/NR/57/eb/79/7990103/1540-1.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Special Item</h5>
-                            <!-- Product reviews-->
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <!-- Product price-->
-                            $18.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See Product</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="https://static.fnac-static.com/multimedia/Images/PT/NR/7d/5c/14/1334397/1540-1/tsp20180321132214/The-Science-of-Cooking.jpg  " alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Sale Item</h5>
-                            <!-- Product price-->
-                            $25.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See Product</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61i+pxO8E0L._AC_UF1000,1000_QL80_.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Popular Item</h5>
-                            <!-- Product reviews-->
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <!-- Product price-->
-                            $40.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See Product</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
   <!-- End of WORKSPACE-->
   </div>
   <!-- Include necessary libraries -->
