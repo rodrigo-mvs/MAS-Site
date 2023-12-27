@@ -23,6 +23,7 @@ function login(form) {
     let user = getUser(email)
     if (user && user.password === password) {
         localStorage.setItem("currentUser", JSON.stringify(user.username))
+        localStorage.setItem("currentEmail", JSON.stringify(user.email))
         window.location.href = "index.html"
     } else {
         alert("Invalid credentials")
@@ -50,12 +51,14 @@ function login(form) {
 
     localStorage.setItem("users", JSON.stringify(users))
     localStorage.setItem("currentUser", JSON.stringify(username))
+    localStorage.setItem("currentEmail", JSON.stringify(email))
     window.location.href = "index.html"
 
 
 }
 function logout() {
     localStorage.removeItem('currentUser')
+    localStorage.removeItem('currentEmail')
     window.location.href = "login.html"
 }
 
