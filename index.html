@@ -27,9 +27,15 @@
               document.write('<a class="btn ms-4" role="button" href="login.html">Login</a>');
           }
           else {
-              document.write('<a class="btn" role="button" onclick="logout()" >Logout</a>');
-              //say hello to the user
-              document.write('<span class="text-muted ms-4">Hello, ' + JSON.parse(localStorage.getItem('currentUser'))+ '</span>');
+              document.write('<div class="dropdown">');
+              document.write('<a class="btn dropdown-toggle ms-4" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Hello, ' + JSON.parse(localStorage.getItem('currentUser'))+ '</a>');
+              document.write('<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">');
+              document.write('<li><a class="dropdown-item" href="cart.html">Cart</a></li>');
+              document.write('<li><a class="dropdown-item" href="myAccount.html">My Account</a></li>');
+              document.write('<li><hr class="dropdown-divider"></li>');
+              document.write('<li><a class="dropdown-item" onclick="logout()" >Logout</a></li>');
+              document.write('</ul>');
+              document.write('</div>');
           }
         </script>
       </span>
@@ -43,49 +49,12 @@
         <a class="navbar-brand mt-2" href="index.html"><h3>KnowledgeNest</h3></a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h5>Programming</h5>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <a href="categorias.html">Python</a>
-              <a href="#">JavaScript</a>
-              <a href="#">Bootstrap</a>
-            </div>
-          </div>
+      <div class="offcanvas-body ml-4">
+          <a href="categorias.html"><h5>Programming</h5></a>
+          <h5 onclick="window.alert('This Element Under Construction!')">Music</h5>
+          <h5 onclick="window.alert('This Element Under Construction!')">Dance</h5>
+          <h5 onclick="window.alert('This Element Under Construction!')">Fitness</h5>
         </div>
-
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h5>Music</h5>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <a href="#">Piano</a>
-              <a href="#">Guitar</a>
-              <a href="#">Flute</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h5>Fitness</h5>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
-        </div>
-
-        <a href="#"><h5>Cooking</h5></a>
-
-
       </div>
     </div>
 
@@ -145,111 +114,88 @@
 
             <!-- Single Product -->
             <div class="col-md-4 col-xl-2 px-4">
+              <a href="product-info.html?id=1">
                 <div id="product-1" class="single-product">
                     <div class="part-1">
-                        <ul>
-                          <button class="btn cart">
-                            <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
-                          </button>
-                            <a href="product-info.html?id=8"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
-                        </ul>
                     </div>
                     <div class="part-2">
                         <h3 class="product-title">Improve Your Communication Skills</h3>
                         <h4 class="product-price">14€</h4>
                     </div>
                 </div>
+              </a>
             </div>
             
             <!-- Single Product -->
             <div class="col-md-4 col-xl-2 px-4">
+              <a href="product-info.html?id=2">
                 <div id="product-2" class="single-product">
                     <div class="part-1">
-                        <ul>
-                          <button class="btn cart">
-                            <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
-                          </button>
-                            <a href="product-info.html?id=7"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
-                        </ul>
                     </div>
                     <div class="part-2">
                         <h3 class="product-title">The Science of Cooking - by Dr Stuart Farrimond</h3>
                         <h4 class="product-price">24€</h4>
                     </div>
                 </div>
+              </a>
             </div>
 
             <!-- Single Product -->
             <div class="col-md-4 col-xl-2 px-4">
-                <div id="product-3" class="single-product">
+              <a href="product-info.html?id=11">
+                <div id="product-11" class="single-product">
                     <div class="part-1">
-                        <ul>
-                          <button class="btn cart">
-                            <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
-                          </button>
-                            <a href="product-info.html?id=6"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
-                        </ul>
                     </div>
                     <div class="part-2">
-                        <h3 class="product-title">Cloud Native DevOps with Kubernetes</h3>
-                        <h4 class="product-price">78€</h4>
+                        <h3 class="product-title">Web Development Online Course</h3>
+                        <h4 class="product-price">80€</h4>
                     </div>
                 </div>
+              </a>
             </div>
 
             <!-- Single Product -->
             <div class="col-md-4 col-xl-2 px-4">
-                <div id="product-4" class="single-product">
+            </button>
+              <a href="product-info.html?id=5">
+                <div id="product-5" class="single-product">
                     <div class="part-1">
                         <span class="new">new</span>
-                        <ul>
-                          <button class="btn cart">
-                            <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
-                          </button>
-                            <a href="product-info.html?id=5"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
-                        </ul>
                     </div>
                     <div class="part-2">
                         <h3 class="product-title">Python Crash Course (2nd Edition)</h3>
                         <h4 class="product-price">43€</h4>
                     </div>
                 </div>
+              </a>
             </div>
 
             <!-- Single Product -->
             <div class="col-md-4 col-xl-2 px-4">
-              <div id="product-2" class="single-product">
+              <a href="product-info.html?id=12">
+              <div id="product-12" class="single-product">
                   <div class="part-1">
-                      <ul>
-                        <button class="btn cart">
-                          <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
-                        </button>
-                          <a href="product-info.html?id=7"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
-                      </ul>
                   </div>
                   <div class="part-2">
-                      <h3 class="product-title">The Science of Cooking</h3>
-                      <h4 class="product-price">24€</h4>
+                      <h3 class="product-title">Artificial Intelligence Basics - A Non-Technical Introdution</h3>
+                      <h4 class="product-price">40€</h4>
                   </div>
                 </div>
+              </a>
             </div>
 
           <!-- Single Product -->
           <div class="col-md-4 col-xl-2 px-4">
-              <div id="product-3" class="single-product">
+            <a href="product-info.html?id=7">
+              <div id="product-7" class="single-product">
                   <div class="part-1">
-                      <ul>
-                        <button class="btn cart">
-                          <i class="fa fa-cart-plus icon" aria-hidden="true"></i>
-                        </button>
-                          <a href="product-info.html?id=6"><i class="fa fa-expand icon" aria-hidden="true"></i></a>
-                      </ul>
                   </div>
                   <div class="part-2">
-                      <h3 class="product-title">Cloud Native DevOps with Kubernetes</h3>
-                      <h4 class="product-price">78€</h4>
+                      <h3 class="product-title">JavaScript from Beguinner to Advanced</h3>
+                      <h4 class="product-price">20€</h4>
                   </div>
                 </div>
+              </a>
           </div>
 
         </div>

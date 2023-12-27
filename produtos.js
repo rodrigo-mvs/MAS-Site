@@ -7,23 +7,23 @@ var vm = function () {
 
     self.productsData = ko.observableArray([
         {
-            name: 'Python Online Course',
-            type: 'Online Course',
-            image: 'https://www.freecodecamp.org/news/content/images/2021/12/chris-ried-ieic5Tq8YMk-unsplash.jpg',
-            categorie: 'Programming',
-            price: 50,
-            description: 'Learn Python programming through this comprehensive online course.',
-            author: 'CodeTeach',
+            name: 'Improve Your Communication Skills - (Creating Success)',
+            type: 'E-Book',
+            image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61i+pxO8E0L._AC_UF1000,1000_QL80_.jpg',
+            categorie: 'Talks',
+            price: 14,
+            description: 'Improve Your Communication Skills is your practical guide to effective verbal, non-verbal and written communication in business. Full of proven tips and techniques, it will help you keep the interest of a large audience, impress a potential employer or simply win the argument at an important meeting.',
+            author: 'Alan Barker',
             id:1
         },
         {
-            name: 'JavaScript E-Book',
+            name: 'The Science of Cooking',
             type: 'E-Book',
-            image: 'https://firmbee.com/wp-content/uploads/ebook-cover-javascript-from-beginner-to-advanced.png',
-            categorie: 'Programming',
-            price: 20,
-            description: 'Dive into JavaScript with this comprehensive e-book, suitable for all levels.',
-            author: 'Sarah Codington',
+            image: 'https://static.fnac-static.com/multimedia/Images/PT/NR/7d/5c/14/1334397/1540-1/tsp20180321132214/The-Science-of-Cooking.jpg',
+            categorie: 'Cooking',
+            price: 24,
+            description: 'Which vegetables should you eat raw? How do you poach the perfect egg? And should you keep your eggs in the fridge? Food scientist Dr Stuart Farrimond answers all these questions - and many more like them - equipping you with the scientific know-how to take your cooking to new levels.',
+            author: 'Stuart Farrimond',
             id:2
         },
         {
@@ -37,7 +37,7 @@ var vm = function () {
             id:3
         },
         {
-            name: 'Guittar Online Course',
+            name: 'Guitar Online Course',
             type: 'Course',
             image: 'https://s3.amazonaws.com/guitareo/gl-sales/og-image.jpg',
             categorie: 'Course',
@@ -69,23 +69,24 @@ var vm = function () {
             id:6
         },
         {
-            name: 'The Science of Cooking',
+
+            name: 'JavaScript from Beguinner to Advanced',
             type: 'E-Book',
-            image: 'https://static.fnac-static.com/multimedia/Images/PT/NR/7d/5c/14/1334397/1540-1/tsp20180321132214/The-Science-of-Cooking.jpg',
-            categorie: 'Cooking',
-            price: 24,
-            description: 'Which vegetables should you eat raw? How do you poach the perfect egg? And should you keep your eggs in the fridge? Food scientist Dr Stuart Farrimond answers all these questions - and many more like them - equipping you with the scientific know-how to take your cooking to new levels.',
-            author: 'Stuart Farrimond',
+            image: 'https://firmbee.com/wp-content/uploads/ebook-cover-javascript-from-beginner-to-advanced.png',
+            categorie: 'Programming',
+            price: 20,
+            description: 'Dive into JavaScript with this comprehensive e-book, suitable for all levels.',
+            author: 'Sarah Codington',
             id:7
         },
         {
-            name: 'Improve Your Communication Skills - (Creating Success)',
-            type: 'E-Book',
-            image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61i+pxO8E0L._AC_UF1000,1000_QL80_.jpg',
-            categorie: 'Talks',
-            price: 14,
-            description: 'Improve Your Communication Skills is your practical guide to effective verbal, non-verbal and written communication in business. Full of proven tips and techniques, it will help you keep the interest of a large audience, impress a potential employer or simply win the argument at an important meeting.',
-            author: 'Alan Barker',
+            name: 'Python Online Course',
+            type: 'Online Course',
+            image: 'https://www.freecodecamp.org/news/content/images/2021/12/chris-ried-ieic5Tq8YMk-unsplash.jpg',
+            categorie: 'Programming',
+            price: 50,
+            description: 'Learn Python programming through this comprehensive online course.',
+            author: 'CodeTeach',
             id:8
         },
     
