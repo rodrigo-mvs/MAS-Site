@@ -150,6 +150,14 @@ var vm = function () {
         self.price(price)
     }
 
+    self.clearCart = function() {
+        localStorage.removeItem('cart');
+        self.products([]);
+        self.price(0);
+        location.reload();
+    }
+    
+
     self.initiate()
 
 }
@@ -158,4 +166,6 @@ $(document).ready(function () {
     console.log("ready!");
     ko.applyBindings(new vm());
 });
+
+
 

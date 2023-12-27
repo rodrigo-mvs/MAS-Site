@@ -66,6 +66,19 @@ function logout() {
     window.location.href = "login.html"
 }
 
+function displayAccountType() {
+    let currentType = JSON.parse(localStorage.getItem("currentType"));
+    if (currentType) {
+        if (currentType === "Professional") {
+            window.location.href = "addProduct.html";
+        } else {
+            alert("Only Professional accounts can access this page.");
+        }
+    } else {
+        alert("No account type found");
+    }
+}
+
 
 window.onload = function() {
     let currentType = localStorage.getItem("currentType");
