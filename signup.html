@@ -48,7 +48,22 @@
                         <div class="mb-3"><input class="shadow-sm form-control" type="email" name="email" placeholder="Email" required=""></div>
                         <div class="mb-3"><input class="shadow-sm form-control" type="password" name="password" placeholder="Password"></div>
                         <div class="mb-3"><input class="shadow-sm form-control" type="password" name="password_repeat" placeholder="Repeat Password"></div>
-                        <div class="mb-5 mt-5"><button class="btn btn-outline-dark shadow" type="submit">Sign in</button></div>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="professionalUse" name="useType" value="Professional" onclick="storeUseType(this.value)" checked>
+                                <label class="form-check-label" for="professionalUse">
+                                    Professional Use
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="personalUse" name="useType" value="Personal" onclick="storeUseType(this.value)">
+                                <label class="form-check-label" for="personalUse">
+                                    Personal Use
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4"><button class="btn btn-outline-dark shadow" type="submit">Sign in</button></div>
                     </form>
 
                     <p class="text-muted">Have an account? <a href="login.html">Log in</a></p>
