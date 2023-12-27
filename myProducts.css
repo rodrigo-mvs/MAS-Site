@@ -53,4 +53,8 @@ body {
     font-size: 30px;
     color: grey;
   }
+
+.card-img-top {
+    max-height: 300px;
+}
   
