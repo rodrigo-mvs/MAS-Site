@@ -17,6 +17,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="addProduct.css" />
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
@@ -25,78 +26,46 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
         <div class="container-fluid">
-            <button class="btn btn-primary-border" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-bars"
-                    aria-hidden="true"></i></button>
-
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-                    <li class="nav-item"><a class="fa fa-user icon" href="myAccount.html" aria-hidden="true"></a></li>
-                </ul>
-            </div>
-    </nav>
-
-
-
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="offcanvas-header">
-            <a class="navbar-brand" href="index.html">
-                <h3>KnowledgeNest</h3>
-            </a>
+          <button class="btn btn-primary-border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    
+          <span class="navbar-text" style="margin-right: 20px;">
+            <script>
+              if (localStorage.getItem('currentUser') == null) {
+                  document.write('<a class="btn" role="button" href="signup.html">Sign up</a>');
+                  document.write('<a class="btn ms-4" role="button" href="login.html">Login</a>');
+              }
+              else {
+                  document.write('<div class="dropdown">');
+                  document.write('<a class="btn dropdown-toggle ms-4" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Hello, ' + JSON.parse(localStorage.getItem('currentUser'))+ '</a>');
+                  document.write('<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">');
+                  document.write('<li><a class="dropdown-item" href="cart.html">Cart</a></li>');
+                  document.write('<li><a class="dropdown-item" href="myAccount.html">My Account</a></li>');
+                  document.write('<li><hr class="dropdown-divider"></li>');
+                  document.write('<li><a class="dropdown-item" onclick="logout()" >Logout</a></li>');
+                  document.write('</ul>');
+                  document.write('</div>');
+              }
+            </script>
+          </span>
+        </div>
+      </nav>
+    
+      <div class="container-sm-1" style="padding: 0 4% 0 4%">
+        
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <a class="navbar-brand mt-2" href="index.html"><h3>KnowledgeNest</h3></a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ml-4">
+              <a href="categorias.html"><h5>Programming</h5></a>
+              <h5 onclick="window.alert('Element Under Construction!')">Music</h5>
+              <h5 onclick="window.alert('Element Under Construction!')">Dance</h5>
+              <h5 onclick="window.alert('Element Under Construction!')">Fitness</h5>
+            </div>
+          </div>
         </div>
-        <div class="offcanvas-body">
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <h5>Programming</h5>
-                </button>
-                <div class="dropdown-content">
-                    <div class="row">
-                        <a href="categorias.html">Python</a>
-                        <a href="#">JavaScript</a>
-                        <a href="#">Bootstrap</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <h5>Music</h5>
-                </button>
-                <div class="dropdown-content">
-                    <div class="row">
-                        <a href="#">Piano</a>
-                        <a href="#">Guitar</a>
-                        <a href="#">Flute</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <h5>Fitness</h5>
-                </button>
-                <div class="dropdown-content">
-                    <div class="row">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#">
-                <h5>Cooking</h5>
-            </a>
-
-            <a href="#" style="padding-left: 5% ; font-size: 18px;" data-bs-container="body" bata-bs-toggle="popover"
-                data-bs-placement="right" data-bs-content="Right Popover">More...</a>
-
-
-        </div>
-    </div>
     <!--WORKSPACE-->
     <div style="background-color: grey;" class="container rounded bg-white mt-5 mb-5">
         <form class="form-horizontal">
@@ -161,9 +130,29 @@
                     </div>
                 </div>
 
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="author">AUTHOR GRADES / LEARNING INSTITUTE</label>
+                    <div class="col-md-4">
+                        <input id="author" name="author" placeholder="YOUR GRADES" class="form-control input-md" required=""
+                            type="text">
+
+                    </div>
+                </div>
+
+                
                 <!-- File Button -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="filebutton">main_image</label>
+                    <label class="col-md-4 control-label" for="filebutton">FILE THAT COMPROVES AUTHOR'S GRADES</label>
+                    <div class="col-md-4">
+                        <input id="filebutton" name="filebutton" class="input-file" type="file">
+                    </div>
+                </div>
+
+
+                <!-- File Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="filebutton">THUMBNAIL</label>
                     <div class="col-md-4">
                         <input id="filebutton" name="filebutton" class="input-file" type="file">
                     </div>
@@ -171,10 +160,10 @@
 
                 <!-- Button -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
-                    <div class="col-md-4">
+                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                    <div class="col-md-4 mt-4">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary"
-                            style="background-color: grey;">Button</button>
+                            style="background-color: grey;" onclick="submitAndRedirect()">SUBMIT</button>
                     </div>
                 </div>
 
@@ -184,6 +173,12 @@
     <!-- End of WORKSPACE-->
     </div>
     <script src="cart.js"></script>
+    <script>
+        function submitAndRedirect() {
+            window.alert('Product submitted to revision successefully! You will receive an email when it is approved.');
+            window.location.href = 'index.html';
+        }
+        </script>
 </body>
 
 </html>
