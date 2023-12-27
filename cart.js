@@ -157,6 +157,31 @@ var vm = function () {
         location.reload();
     }
     
+self.placeOrder = function() {
+    // Obter os produtos do carrinho do local storage
+    var cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+    // Obter os produtos do usuário do local storage
+    var userProducts = JSON.parse(localStorage.getItem('userProducts')) || [];
+
+    // Adicionar os produtos do carrinho aos produtos do usuário
+    for (var id in cart) {
+        userProducts.push({
+            'id': id,
+            'quantity': cart[id]
+        });
+    }
+
+    // Atualizar os produtos do usuário no local storage
+    localStorage.setItem('userProducts', JSON.stringify(userProducts));
+
+    // Limpar o carrinho
+    self.clearCart();
+
+    alert("Thank you for buying from us! Your products will be delivered via email soon.");
+    window.location.href = "index.html";
+}
+
 
     self.initiate()
 

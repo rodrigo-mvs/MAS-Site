@@ -62,7 +62,7 @@ function logout() {
     localStorage.removeItem('currentUser')
     localStorage.removeItem('currentEmail')
     localStorage.removeItem('currentType')
-    
+    localStorage.removeItem('userProducts')
     window.location.href = "login.html"
 }
 
